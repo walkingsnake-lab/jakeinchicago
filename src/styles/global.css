@@ -23,8 +23,7 @@
 
   --font-main: Inter, Helvetica, 'Helvetica Neue', Arial, sans-serif;
 
-  --sidebar-width: 48%;
-  --content-max: 600px;
+  --sidebar-width: 44%;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -144,7 +143,7 @@ a:hover { color: var(--accent-hover); }
   position: relative;
   z-index: 1;
   display: flex;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 4rem;
   min-height: 100vh;
@@ -350,7 +349,6 @@ svg.line-badge {
   font-size: 1.1rem;
   color: var(--text-secondary);
   line-height: 1.75;
-  max-width: var(--content-max);
   padding: 0 0.5rem;
 }
 
@@ -658,7 +656,6 @@ a.project-top:hover .project-title {
   font-size: 1.1rem;
   color: var(--text-secondary);
   line-height: 1.75;
-  max-width: var(--content-max);
   padding: 0 0.5rem;
 }
 
@@ -684,7 +681,7 @@ a.project-top:hover .project-title {
 .footer {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 4rem 3rem;
 }
