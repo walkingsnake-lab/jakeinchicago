@@ -188,10 +188,11 @@ a:hover { color: var(--accent-hover); }
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   letter-spacing: -0.05em;
   border-radius: 3px;
   flex-shrink: 0;
@@ -808,7 +809,7 @@ a.project-top:hover .project-title {
   .title-icon {
     width: 28px;
     height: 28px;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
   .content {
     width: 100%;
