@@ -264,6 +264,7 @@ a:hover { color: var(--accent-hover); }
   display: flex;
   gap: 1.25rem;
   align-items: center;
+  transition: opacity 0.15s ease;
 }
 
 .social-link {
@@ -687,19 +688,33 @@ a.project-top:hover .project-title {
   padding: 4rem 4rem 3rem;
 }
 
-.footer .section-header {
-  margin-bottom: 1.5rem;
+.footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.2rem 0.75rem 0.7rem;
+  background: #000;
+  position: relative;
 }
 
-.footer-body {
-  padding: 0 0.5rem;
+.footer-bar::after {
+  content: '';
+  position: absolute;
+  top: 0.35rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #bbb;
 }
 
 .footer-credit {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 400;
   color: #999;
-  line-height: 1.8;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
 }
 
 .footer-credit a {
@@ -710,6 +725,39 @@ a.project-top:hover .project-title {
 .footer-credit a:hover {
   color: var(--accent-hover);
   border-color: var(--accent-hover);
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.footer-social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+}
+
+.footer-social-circle {
+  position: absolute;
+  inset: 0;
+}
+
+.footer-social-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  z-index: 1;
+}
+
+.footer-social-link:hover .footer-social-circle circle {
+  opacity: 0.8;
 }
 
 
