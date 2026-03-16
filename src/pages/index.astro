@@ -379,6 +379,12 @@ import '../styles/global.css';
   const footerEl = document.querySelector('.footer');
 
   if (sidebarFooter && footerEl) {
+    // Clear the fadeIn animation so inline opacity from scroll JS can take effect
+    sidebarFooter.addEventListener('animationend', () => {
+      sidebarFooter.style.animation = 'none';
+      sidebarFooter.style.opacity = '1';
+    }, { once: true });
+
     window.addEventListener('scroll', () => {
       const footerRect = footerEl.getBoundingClientRect();
       const vh = window.innerHeight;
