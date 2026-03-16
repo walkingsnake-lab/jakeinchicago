@@ -683,7 +683,9 @@ a.project-top:hover .project-title {
 .footer {
   position: relative;
   z-index: 1;
-  padding: 2rem 0 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 4rem 3rem;
 }
 
 .footer-bar {
