@@ -7,7 +7,7 @@ import '../styles/global.css';
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jake in Chicago — Frontend Developer</title>
+  <title>Jake Hamilton — Frontend Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -27,9 +27,9 @@ import '../styles/global.css';
   <header class="sidebar">
     <div>
       <div class="sidebar-header">
-        <h1 class="name">Jake in Chicago</h1>
+        <h1 class="name">Jake Hamilton</h1>
         <p class="title"><span class="title-icon">&lt;/&gt;</span>Frontend Developer</p>
-        <p class="tagline">10+ years building front-end experiences, from ad agency campaigns to university platforms to live transit maps.</p>
+        <p class="tagline">Chicago-based developer with 10+ years building front-end experiences, from ad agency campaigns to university platforms to live transit maps.</p>
       </div>
 
       <nav>
@@ -254,10 +254,16 @@ import '../styles/global.css';
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p class="footer-credit">Built with <a href="https://astro.build/" target="_blank">Astro</a> and deployed on <a href="https://vercel.com/" target="_blank">Vercel</a>. All text set in <a href="https://rsms.me/inter/" target="_blank">Inter</a>.</p>
-  <p class="footer-credit">Live train map powered by <a href="https://www.transitchicago.com/developers/" target="_blank">CTA Train Tracker API</a> and rendered with <a href="https://d3js.org/" target="_blank">D3.js</a>.</p>
-  <p class="footer-credit">Design loosely inspired by <a href="https://brittanychiang.com/" target="_blank">Brittany Chiang</a>.</p>
-  <p class="footer-location">Made in Chicago</p>
+  <div class="section-header">
+    <h2 class="section-header-text">Colophon</h2>
+    <svg class="line-badge" width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="23" cy="23" r="23" fill="var(--purple)" />
+      <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="#fff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="30">5</text>
+    </svg>
+  </div>
+  <div class="footer-body">
+    <p class="footer-credit">Built with <a href="https://astro.build/" target="_blank">Astro</a> and deployed on <a href="https://vercel.com/" target="_blank">Vercel</a>. Live train map powered by the <a href="https://www.transitchicago.com/developers/" target="_blank">CTA Train Tracker API</a> and rendered with <a href="https://d3js.org/" target="_blank">D3.js</a>. Web design inspired by <a href="https://brittanychiang.com/" target="_blank">Brittany Chiang</a>. Made in Chicago.</p>
+  </div>
 </footer>
 
 <script>
