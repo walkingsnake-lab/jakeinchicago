@@ -683,14 +683,12 @@ a.project-top:hover .project-title {
 .footer {
   position: relative;
   z-index: 1;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 4rem 4rem 3rem;
+  padding: 2rem 0 3rem;
 }
 
 .footer-bar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
   padding: 1.2rem 0.75rem 0.7rem;
@@ -709,12 +707,13 @@ a.project-top:hover .project-title {
 }
 
 .footer-credit {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #999;
   line-height: 1.6;
   margin: 0;
   flex: 1;
+  max-width: 480px;
 }
 
 .footer-credit a {
