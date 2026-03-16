@@ -20,7 +20,7 @@ One-page portfolio/resume site for a frontend developer. NYC subway / CTA transi
 - Keep it simple. Don't over-engineer. One page is fine for now.
 
 ## CTA Map Background
-- Live CTA train map embedded via iframe from `gojackrabbitgo.pythonanywhere.com`
+- Live CTA train map embedded via iframe from `ctamap.vercel.app`
 - URL params: `?lat=41.8827&lng=-87.6317&zoom=8&embed=true`
 - Iframe is 140% width with -20% margin-left for coverage
 - JS dynamically positions the iframe so the Loop (map center) aligns over the center of the right content column, recalculates on resize
