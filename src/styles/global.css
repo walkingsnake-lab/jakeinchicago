@@ -779,8 +779,6 @@ a.project-top:hover .project-title {
   animation: fadeIn 0.7s ease 0.4s forwards;
 }
 .sidebar-footer {
-  opacity: 0;
-  animation: fadeIn 0.7s ease 0.6s forwards;
 }
 
 
