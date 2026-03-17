@@ -113,7 +113,7 @@ a:hover { color: var(--accent-hover); }
 
 .live-badge {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
   position: absolute;
   bottom: 2rem;
@@ -831,4 +831,12 @@ a.project-top:hover .project-title {
 
   svg.line-badge { width: 38px; height: 38px; }
   .section-header-text { font-size: 1.2rem; }
+
+  .live-badge {
+    bottom: max(4.5rem, calc(env(safe-area-inset-bottom, 0px) + 4rem));
+  }
+
+  #mapLayer iframe {
+    transform: translateY(18%);
+  }
 }
