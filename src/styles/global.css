@@ -445,6 +445,14 @@ svg.line-badge {
   color: #fff;
   letter-spacing: -0.04em;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.loc-badge {
+  flex-shrink: 0;
+  display: block;
 }
 
 .exp-date {
@@ -467,10 +475,6 @@ svg.line-badge {
   gap: 0;
 }
 
-.exp-location {
-  color: #666;
-  font-weight: 300;
-}
 
 .exp-desc {
   font-size: 1rem;
