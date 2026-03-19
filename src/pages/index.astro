@@ -323,7 +323,11 @@ import '../styles/global.css';
 
     const fadeProgress = Math.min(scrollY / (vh * 0.7), 1);
 
-    mapLayer.style.transform = `translateY(${-scrollY * 0.2}px)`;
+    // Skip parallax transform on mobile — applying translateY to a fixed element
+    // containing an iframe triggers iframe redraws when the iOS address bar resizes
+    if (window.innerWidth > 900) {
+      mapLayer.style.transform = `translateY(${-scrollY * 0.2}px)`;
+    }
 
     const opacity = Math.max(0, 1 - fadeProgress);
     mapLayer.style.opacity = opacity;
@@ -383,6 +387,7 @@ import '../styles/global.css';
     if (isMobile) {
       mapLayerEl.style.setProperty('--iframe-offset', '0px');
       mapLayerEl.style.setProperty('--vignette-x', '50%');
+      mapLayerEl.style.transform = ''; // clear any scroll-applied transform
       return;
     }
     const rect = contentEl.getBoundingClientRect();
