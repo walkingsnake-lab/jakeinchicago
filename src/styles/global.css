@@ -467,6 +467,11 @@ svg.line-badge {
   gap: 0;
 }
 
+.exp-location {
+  color: #666;
+  font-weight: 300;
+}
+
 .exp-desc {
   font-size: 1rem;
   font-weight: 300;
