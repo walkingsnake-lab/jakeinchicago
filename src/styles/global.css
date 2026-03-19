@@ -790,6 +790,31 @@ a.project-top:hover .project-title {
    RESPONSIVE
    ============================================= */
 @media (max-width: 900px) {
+  /* Stabilize map layer height — 100lvh doesn't resize when the iOS address bar
+     shows/hides, preventing the iframe from redrawing on scroll */
+  #mapLayer {
+    height: 100vh; /* fallback */
+    height: 100lvh;
+  }
+
+  /* Shift the map center lower on mobile */
+  #mapLayer iframe {
+    transform: translateY(8%);
+  }
+
+  /* Adjust vignette center to match the shifted iframe */
+  #mapLayer::after {
+    background: radial-gradient(ellipse at 50% 55%,
+      transparent 10%,
+      rgba(0,0,0,0.15) 25%,
+      rgba(0,0,0,0.35) 38%,
+      rgba(0,0,0,0.55) 48%,
+      rgba(0,0,0,0.75) 56%,
+      rgba(0,0,0,0.9) 64%,
+      #000 72%
+    );
+  }
+
   .layout {
     flex-direction: column;
     padding: 0 1.5rem;
@@ -822,6 +847,10 @@ a.project-top:hover .project-title {
   }
   .content-spacer {
     height: 50vh;
+  }
+  /* Push badge up enough to clear Safari's address bar and bottom toolbar */
+  .live-badge {
+    bottom: 4rem;
   }
   .project-card {
     grid-template-columns: 1fr;
