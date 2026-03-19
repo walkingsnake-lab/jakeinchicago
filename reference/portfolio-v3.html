@@ -243,6 +243,7 @@ a:hover { color: var(--accent-hover); }
   letter-spacing: -0.03em;
   color: var(--text-dim);
   transition: color 0.25s ease, font-weight 0.15s ease;
+  position: relative;
 }
 
 .nav-dot {
@@ -275,6 +276,30 @@ a:hover { color: var(--accent-hover); }
 .nav-link.active .nav-dot {
   scale: 1;
   opacity: 1;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--dot-color) 0%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-link.active::before,
+.nav-link:hover::before {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.5; }
 }
 
 
@@ -847,10 +872,10 @@ a.project-top:hover .project-title {
 
       <nav>
         <ul class="sidebar-nav">
-          <li><a href="#about" class="nav-link active"><svg class="nav-dot" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="var(--blue)"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="#fff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="18">1</text></svg><span>About</span></a></li>
-          <li><a href="#experience" class="nav-link"><svg class="nav-dot" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="var(--red)"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="#fff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="18">2</text></svg><span>Experience</span></a></li>
-          <li><a href="#projects" class="nav-link"><svg class="nav-dot" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="var(--green)"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="#fff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="18">3</text></svg><span>Projects</span></a></li>
-          <li><a href="#contact" class="nav-link"><svg class="nav-dot" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="var(--orange)"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="#fff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="18">4</text></svg><span>Contact</span></a></li>
+          <li><a href="#about" class="nav-link active" style="--dot-color: var(--blue)"><svg class="nav-dot" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="var(--blue)"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="#fff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="18">1</text></svg><span>About</span></a></li>
+          <li><a href="#experience" class="nav-link" style="--dot-color: var(--red)"><svg class="nav-dot" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="var(--red)"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="#fff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="18">2</text></svg><span>Experience</span></a></li>
+          <li><a href="#projects" class="nav-link" style="--dot-color: var(--green)"><svg class="nav-dot" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="var(--green)"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="#fff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="18">3</text></svg><span>Projects</span></a></li>
+          <li><a href="#contact" class="nav-link" style="--dot-color: var(--orange)"><svg class="nav-dot" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="var(--orange)"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="#fff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="18">4</text></svg><span>Contact</span></a></li>
         </ul>
       </nav>
     </div>

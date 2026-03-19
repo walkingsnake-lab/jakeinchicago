@@ -223,6 +223,7 @@ a:hover { color: var(--accent-hover); }
   align-items: center;
   gap: 0.85rem;
   padding: 0.5rem 0;
+  position: relative;
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: -0.03em;
@@ -257,6 +258,30 @@ a:hover { color: var(--accent-hover); }
 .nav-link:hover .nav-dot,
 .nav-link.active .nav-dot {
   scale: 1;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--dot-color) 0%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-link.active::before,
+.nav-link:hover::before {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.5; }
 }
 
 
